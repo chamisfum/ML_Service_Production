@@ -93,7 +93,7 @@ app = Flask(__name__) # TO CHANGE
 PRODUCTION CONFIG!
     uncomment and change the static_url_path to into url project path
 """
-# app = Flask(__name__, static_url_path=PARENT_LOCATION+'static') # TO CHANGE 
+# app = Flask(__name__, static_url_path='/'+PARENT_LOCATION+'/static')  # TO CHANGE 
 
 @app.after_request
 def add_header(r):
