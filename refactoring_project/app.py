@@ -110,7 +110,7 @@ def add_header(r):
 
 #   ROUTING START!
 # @app.route('/'+PRODUCT_ID+"/")
-@app.route("/")
+@app.route("/compare")
 def compare():
     """
         Render UI template for compare model home page
