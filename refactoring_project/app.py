@@ -109,7 +109,7 @@ def add_header(r):
     return r
 
 #   ROUTING START!
-# @app.route('/'+PRODUCT_ID+"/")
+# @app.route('/'+PRODUCT_ID+"/") # TO CHANGE
 @app.route("/compare")
 def compare():
     """
@@ -123,7 +123,7 @@ def compare():
                             topic_name = TOPIC_NAME, aoi_id = AREA_OF_INTEREST_ID, topic_id = TOPIC_ID, 
                             product_id = PRODUCT_ID, imageQuery = imageQuery, imageClass=imageClass)
 
-# @app.route('/'+PRODUCT_ID+'/pred_comp', methods=['POST'])
+# @app.route('/'+PRODUCT_ID+'/pred_comp', methods=['POST']) # TO CHANGE
 @app.route('/pred_comp', methods=['POST'])
 def predict_compare():
     """
@@ -144,7 +144,7 @@ def predict_compare():
                             topic_name = TOPIC_NAME, aoi_id = AREA_OF_INTEREST_ID, topic_id = TOPIC_ID, 
                             product_id = PRODUCT_ID, model = choosenModelList, run_time = predictionTime, img = getImageFile[7:])
 
-# @app.route('/'+PRODUCT_ID+'/pred_comps', methods=['POST'])
+# @app.route('/'+PRODUCT_ID+'/pred_comps', methods=['POST']) # TO CHANGE
 @app.route('/pred_comps', methods=['POST'])
 def predicts_compare():
     """
@@ -167,7 +167,7 @@ def predicts_compare():
                             topic_name = TOPIC_NAME, aoi_id = AREA_OF_INTEREST_ID, topic_id = TOPIC_ID, 
                             product_id = PRODUCT_ID, model = choosenModelList, run_time = predictionTime, img = relocationImageFile[7:])
 
-# @app.route('/'+PRODUCT_ID+'/select')
+# @app.route('/'+PRODUCT_ID+'/select') # TO CHANGE
 @app.route('/select')
 def select():
     """
@@ -181,7 +181,7 @@ def select():
                             topic_name = TOPIC_NAME, aoi_id = AREA_OF_INTEREST_ID, topic_id = TOPIC_ID, 
                             product_id = PRODUCT_ID, imageQuery = imageQuery, imageClass = imageClass)
 
-# @app.route('/'+PRODUCT_ID+'/pred_select', methods=['POST'])
+# @app.route('/'+PRODUCT_ID+'/pred_select', methods=['POST']) # TO CHANGE
 @app.route('/pred_select', methods=['POST'])
 def predict_select():
     """
@@ -202,7 +202,7 @@ def predict_select():
                             topic_name = TOPIC_NAME, aoi_id = AREA_OF_INTEREST_ID, topic_id = TOPIC_ID, 
                             product_id = PRODUCT_ID, model = choosenModel, run_time = predictionTime, img = getImageFile[7:])
 
-# @app.route('/'+PRODUCT_ID+'/pred_selects', methods=['POST'])
+# @app.route('/'+PRODUCT_ID+'/pred_selects', methods=['POST']) # TO CHANGE
 @app.route('/pred_selects', methods=['POST'])
 def predicts_select():
     """
