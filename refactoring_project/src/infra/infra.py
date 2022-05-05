@@ -254,8 +254,12 @@ def _getImageSizeFromModel(model, index=0, buttom=0, top=-1):
         accept model and index as argument and return a model input shape with image size 
         based on model input shape
     """
-    model_input_shape   = _getElementByIndex(model.layers, index)
-    image_size          = _getElementByIndexRange(model_input_shape.input_shape, buttom, top)
+    model_layer = model.layers
+    model_input_shape = _getElementByIndex(model_layer, index)
+    input_shape = model_input_shape.input_shape
+    if type(input_shape) is list:
+        input_shape = input_shape[0]
+    image_size = _getElementByIndexRange(input_shape, buttom, top)
     return model_input_shape, image_size
 
 def _resizeImageByModelInputShape(image, model):
